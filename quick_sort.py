@@ -1,4 +1,23 @@
 
+# Quick Sort algorithm
+
+# 1. Determine base case
+# 2. Choose pivot 
+# 3. Partition array into less than and greater than pivot
+# 4. 
+
+def quick_sort(arr):
+  if len(arr) < 2:
+    return arr
+  else:
+    pivot = arr[0]
+    less = [value for value in arr[1:] if value < pivot]
+    greater = [value for value in arr[1:] if value > pivot]
+
+    return quick_sort(less) + [pivot] + quick_sort(greater)
+
+print quick_sort([10, 5, 2, 3])
+
 # Exercise 
 # 4.1
 def sum_recursion(arr):
