@@ -1,4 +1,3 @@
-
 # Quick Sort algorithm
 
 # 1. Determine base case
@@ -16,26 +15,7 @@ def quick_sort(arr):
 
     return quick_sort(less) + [pivot] + quick_sort(greater)
 
-print quick_sort([10, 5, 2, 3])
-
-# Exercise 
-# 4.1
-def sum_recursion(arr):
-  if not len(arr):
-    return 0
-  
-  return arr[0] + sum_recursion(arr[1:])
-
-print sum_recursion([1, 2, 3, 4]) # Correct
-
-# 4.2
-def count_recursion(arr):
-  if not len(arr):
-    return 0
-  
-  return 1 + count_recursion(arr[1:])
-
-print count_recursion([1, 2, 3, 4, 5, 6, 7]) # Correct
+print(quick_sort([10, 5, 2, 3]))
 
 # 4.3
 def max_recursion(arr):
@@ -57,7 +37,7 @@ def max_recursion(arr):
   else:
     return mr
 
-print max_recursion([2, 4, 5, 6, 3, 1, 7, 6, 7, 8, 9]) # Correct
+print(max_recursion([2, 4, 5, 6, 3, 1, 7, 6, 7, 8, 9])) # Correct
 
 # 4.4
 # What is the base case and recursive case for binary search?
