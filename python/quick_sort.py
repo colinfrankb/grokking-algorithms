@@ -3,7 +3,7 @@
 # 1. Determine base case
 # 2. Choose pivot 
 # 3. Partition array into less than and greater than pivot
-# 4. 
+# 4. Call quicksort recursively on the two sub-arrays
 
 def quick_sort(arr):
   if len(arr) < 2:
@@ -16,28 +16,6 @@ def quick_sort(arr):
     return quick_sort(less) + [pivot] + quick_sort(greater)
 
 print(quick_sort([10, 5, 2, 3]))
-
-# 4.3
-def max_recursion(arr):
-  if len(arr) == 0:
-    return 0
-
-  if len(arr) == 1:
-    return arr[0]
-
-  if len(arr) == 2:
-    if arr[0] > arr[1]:
-      return arr[0]
-    else:
-      return arr[1]
-
-  mr = max_recursion(arr[1:])
-  if arr[0] > mr:
-    return arr[0]
-  else:
-    return mr
-
-print(max_recursion([2, 4, 5, 6, 3, 1, 7, 6, 7, 8, 9])) # Correct
 
 # 4.4
 # What is the base case and recursive case for binary search?
@@ -66,21 +44,3 @@ print(max_recursion([2, 4, 5, 6, 3, 1, 7, 6, 7, 8, 9])) # Correct
 # Answer: The recursive case is to split the array in half,
 #         throw away one half, and call binary search on the other
 #         half        
-
-# 4.5
-# Printing the value of each element in an array
-# O(n) - Correct
-
-# 4.6
-# Doubling the value of each element in an array
-# O(n) - Correct
-
-# 4.7
-# Doubling the value of just the first element in an array
-# O(1) - Correct
-
-# 4.8
-# Creating a multiplication table with all the elements in the array.
-# So if your array is [2, 3, 7, 8, 10], you first multiply every element
-# by 2, then multiply every element by 3, then by 7, and so on.
-# O(n^2) - Correct
