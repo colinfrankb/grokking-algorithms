@@ -87,11 +87,7 @@ const _deleteValue = (head, val) => {
   if (head === null) return null;
 
   if (head.val === val) {
-    if (head.next === null) {
-      return null;
-    } else {
-      return head.next;
-    }
+    return head.next;
   }
 
   head.next = _deleteValue(head.next, val);
